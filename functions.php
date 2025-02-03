@@ -17,5 +17,5 @@ define( 'CORE_DIST', CORE_URL . '/js/dist/' );
 
 require_once CORE_INC . 'blankslate.php';
 require_once CORE_INC . 'custom-posts.php';
-// require_once CORE_INC . 'shortcodes.php';
-// require_once CORE_INC . 'tools.php';
+require_once CORE_INC . 'shortcodes.php';
+require_once CORE_INC . 'tools.php';
