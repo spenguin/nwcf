@@ -1,0 +1,8 @@
+cd J:\Weirdspace\Projects\NewWestComicFest\newsite\wp-content\themes\nwcf
+sass --watch css/main.scss:style.css
+
+
+
+
+
+npm run build_ticketsales
