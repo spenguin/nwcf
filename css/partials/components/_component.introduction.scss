@@ -1,0 +1,7 @@
+/** Component styling */
+
+.introduction {
+    @include screen-greater-than(desktop){
+        display: none;
+    }
+}

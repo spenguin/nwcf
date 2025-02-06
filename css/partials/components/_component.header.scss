@@ -4,6 +4,39 @@
     color: white;
     padding: 0.5rem;
 }
-.branding__logo img {
-    width: 100%;
+.branding {
+    @include screen-greater-than(desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__wrapper {
+        @include screen-greater-than(tablet){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            #site-description, nav {
+                width: 48%;
+            }
+        }
+        @include screen-greater-than(desktop) {
+            width: 100%;
+        }
+    }
+    &__introduction {
+        display: none;
+        @include screen-greater-than(desktop){
+            display: flex;
+            width: 48%;
+            flex-direction: column;
+        }
+    }
+    &__logo {
+        @include screen-greater-than(desktop) {
+            width: 45%;
+        }
+        img {
+            width: 100%;
+        }
+    }
 }
