@@ -15,6 +15,10 @@
         border: 1px solid $grey;
         overflow: hidden;
         position:relative;
+        @include screen-greater-than(desktop){
+            width: 250px;
+            height: 250px;
+        }
         &:hover {
             .tablers__item--text {
                 top: 0;
@@ -25,14 +29,32 @@
             padding: 0 0.25rem;
             font-size: 1rem;
         }
+        img {
+            width: 100%;
+            height: 100%;
+        }
         &--text {
             background-color: $white;
             position: absolute;
             top: 150px;
             width: 100%;
             height: 100%;
+            @include screen-greater-than(desktop) {
+                top: 250px;
+            }
             &.no-image {
                 top: 0;
+            }
+        }
+        &--social-media {
+            font-size: 2rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 2%;
+            & a {
+                width: 22%;
             }
         }
     }

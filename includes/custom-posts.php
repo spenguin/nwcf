@@ -16,6 +16,9 @@ function initialize()
     add_action('save_post_tabler', '\CustomPosts\save_instagram_handle');
     add_action('save_post_tabler', '\CustomPosts\save_tiktok_handle');
     add_action('save_post_tabler', '\CustomPosts\save_facebook_handle');
+    add_action('save_post_tabler', '\CustomPosts\save_linktree_url');
+    add_action('save_post_tabler', '\CustomPosts\save_website');
+    
 }
 
 function custom_post_type()
@@ -100,6 +103,8 @@ function admin_init()
     add_meta_box('instagram_handle_meta', 'Instagram handle', '\CustomPosts\instagram_handle', 'tabler', 'side');
     add_meta_box('tiktok_handle_meta', 'Tiktok handle', '\CustomPosts\tiktok_handle', 'tabler', 'side');
     add_meta_box('facebook_handle_meta', 'Facebook handle', '\CustomPosts\facebook_handle', 'tabler', 'side');
+    add_meta_box('linktree_url_meta', 'Linktree URL', '\CustomPosts\linktree_url', 'tabler', 'side');
+    add_meta_box('website_meta', 'Website', '\CustomPosts\website', 'tabler', 'side');
 
 }
 
@@ -186,4 +191,46 @@ function save_facebook_handle()
     $facebook_handle = isset( $_POST['facebook_handle'] ) ? $_POST['facebook_handle'] : '';
 
     update_post_meta($post->ID, 'facebook_handle', $facebook_handle);
+}
+
+function linktree_url()
+{
+    global $post;
+    $custom         = get_post_custom($post->ID);
+    $linktree_url = (isset($custom['linktree_url'][0])) ? $custom['linktree_url'][0] : '';
+?>
+    <label for="linktree_url">Linktree url:</label>
+    <input type="text" name="linktree_url" value="<?php echo $linktree_url; ?>" />
+<?php
+}
+
+function save_linktree_url()
+{
+    global $post;
+    if (empty($post->ID)) return;
+    $custom     = get_post_custom($post->ID);
+    $linktree_url = isset( $_POST['linktree_url'] ) ? $_POST['linktree_url'] : '';
+
+    update_post_meta($post->ID, 'linktree_url', $linktree_url);
+}
+
+function website()
+{
+    global $post;
+    $custom         = get_post_custom($post->ID);
+    $website = (isset($custom['website'][0])) ? $custom['website'][0] : '';
+?>
+    <label for="website">Website:</label>
+    <input type="text" name="website" value="<?php echo $website; ?>" />
+<?php
+}
+
+function save_website()
+{
+    global $post;
+    if (empty($post->ID)) return;
+    $custom     = get_post_custom($post->ID);
+    $website = isset( $_POST['website'] ) ? $_POST['website'] : '';
+
+    update_post_meta($post->ID, 'website', $website);
 }
