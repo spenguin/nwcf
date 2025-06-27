@@ -48,7 +48,7 @@ function custom_post_type()
         // Features this CPT supports in Post Editor
         'supports'            => array('title', 'editor', 'thumbnail', 'excerpt'),
         // You can associate this CPT with a taxonomy or custom taxonomy. 
-        'taxonomies'          => array('line'),
+        'taxonomies'          => ['show'],
         'rewrite' => array('slug' => 'tabler', 'with_front' => false),
         /* A hierarchical CPT is like Pages and can have
 		* Parent and child items. A non-hierarchical CPT
@@ -77,13 +77,13 @@ function custom_post_type()
 function custom_taxonomy_type()
 {
     register_taxonomy(
+        'show',
         'tabler',
-        'line',
         array(
             'labels'    => array(
-                'name'  => 'Line',
-                'add_new_item'  => 'Add New Line',
-                'new_item_name' => 'New Line'
+                'name'  => 'Show',
+                'add_new_item'  => 'Add New Show',
+                'new_item_name' => 'New Show'
             ),
             'show_ui'   => TRUE,
             'show_tagcloud' => FALSE,

@@ -11,6 +11,8 @@
         justify-content: space-between;
     }
     &__wrapper {
+        white-space: pre-wrap;
+        word-break: break-word;
         @include screen-greater-than(tablet){
             display: flex;
             flex-direction: row;
@@ -24,11 +26,17 @@
         }
     }
     &__introduction {
-        display: none;
+        display: flex;
+        flex-direction: column;
         @include screen-greater-than(desktop){
-            display: flex;
             width: 48%;
-            flex-direction: column;
+        }
+        a {
+            color: $gold;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     &__logo {

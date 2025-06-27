@@ -11,6 +11,8 @@
     min-width: 144px;
     display: inline-block;
     text-align: center;
+    white-space: pre-wrap;
+    word-break: break-word;
     @include screen-greater-than(tablet){
         font-size: 1.25rem;
     }

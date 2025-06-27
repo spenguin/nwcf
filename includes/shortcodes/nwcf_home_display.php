@@ -23,8 +23,8 @@ function nwcf_home_display( $atts = [], $content = null, $tag = '' )
                         $facebook_handle    = get_post_meta( $query->post->ID, 'facebook_handle', TRUE ); 
                         $instagram_handle   = get_post_meta( $query->post->ID, 'instagram_handle', TRUE ); 
                         $twitter_handle     = get_post_meta( $query->post->ID, 'twitter_handle', TRUE ); 
-                        $tiktok_handle      = get_post_meta( $query->post->ID, 'ttiktok_handle', TRUE );
-                        
+                        $tiktok_handle      = get_post_meta( $query->post->ID, 'tiktok_handle', TRUE );
+                        $website            = get_post_meta( $query->post->ID, 'website', TRUE );
                         
                     ?>
                         <div class="tablers__item">
@@ -51,7 +51,9 @@ function nwcf_home_display( $atts = [], $content = null, $tag = '' )
                                     <?php if(!empty($tiktok_handle)): ?>
                                         <a href="https://tiktok.com/<?php echo $tiktok_handle; ?>" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
                                     <?php endif; ?>                                      
-                                    
+                                    <?php if(!empty($website)): ?>
+                                        <a href="<?php echo $website; ?>" target="_blank"><img src="<?php echo CORE_URL . '/assets/images/icons8-website-50.png'; ?>"></a>
+                                    <?php endif; ?>                                    
                                 </div>
                             </div>
                         </div>
