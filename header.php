@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+        <link rel="icon" href="<?php echo CORE_TEMPLATE_URL; ?>/assets/images/NWCF-favicon.png" type="image/x-icon">
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
@@ -18,8 +19,8 @@
                         <div class="branding__wrapper">
                             <div id="site-description"<?php if ( !is_single() ) { echo ' itemprop="description"'; } ?>><?php bloginfo( 'description' ); ?></div>
                             <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-                                <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSe29bF0koJ0Ftf8E0Y1otk3vnv7fBSteblKCJ7Pr0x6Ck9mtQ/viewform?usp=header" target="_blank" class="button button__cta">Tables still available!</a> -->
-                                <a target="_blank" class="button button__cta">Tables are no longer available!</a>                                
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKVqhEM1RVsO5enrxQzeYhQwfsrKduuX7ps4R_xpkYipg7JA/viewform?usp=header" target="_blank" class="button button__cta">Tables now available!</a>
+                                <!-- <a target="_blank" class="button button__cta">Tables are no longer available!</a>                                 -->
                                 <!-- <?php //wp_nav_menu( array( 'menu'=>'Main', 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?> -->
                             </nav>
                         </div>

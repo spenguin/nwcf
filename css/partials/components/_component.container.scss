@@ -1,0 +1,8 @@
+/** Container styles */
+#container a {
+    text-decoration: none;
+    color: $gold;
+    &:hover {
+        text-decoration: underline;
+    }
+}

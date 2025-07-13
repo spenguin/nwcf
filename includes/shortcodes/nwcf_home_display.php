@@ -6,15 +6,24 @@
 
 function nwcf_home_display( $atts = [], $content = null, $tag = '' )
 {
+    extract(shortcode_atts([
+        'show' => 'autumn-2025',
+    ], $atts));
+    
     $args = [
         'post_type'     => 'tabler',
-        'posts_per_page'=> -1
+        'posts_per_page'=> -1,
+        'tax_query'     => [
+            [
+                'taxonomy' => 'show',
+                'field' => 'slug',
+                'terms' => $show,
+            ]
+        ]
     ];
     $query = new WP_Query($args); 
     if( $query->have_posts() ): 
         
-
-
         ob_start(); ?>
             <div class="tablers">
                 <?php

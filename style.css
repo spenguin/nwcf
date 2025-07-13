@@ -239,6 +239,15 @@ h2 {
   }
 }
 
+/** Container styles */
+#container a {
+  text-decoration: none;
+  color: #f78d2d;
+}
+#container a:hover {
+  text-decoration: underline;
+}
+
 /** Navigation aggregator */
 /** Header navigation */
 #menu {
