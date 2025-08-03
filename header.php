@@ -29,8 +29,14 @@
                             <?php 
                                 echo get_post_by_title('Introduction');
                             ?>
+                            <div class="social-media">
+                                <a href="https://www.facebook.com/profile.php?id=61578407721581" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/newwestcomicfest/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://x.com/newwestcomicfst" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                            </div>                             
                         </div>
                     </div>
+
                 </div>
             </header>
             <div id="container" class="max-wrapper">
